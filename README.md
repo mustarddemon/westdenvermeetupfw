@@ -1,3 +1,6 @@
+# Links
+[Link to meetup videos and other resources](https://qubedapples.wordpress.com/category/west-denver-software-test-engineering-meetup/)
+
 # Overview
 This is a repository used for training purposes to walk through the creation of a API and UI Automated Test Framework.  This readme covers Day - 0 in which it just provides a project from which you can follow along with during the meetup or through the videos to create your own framework.
 
