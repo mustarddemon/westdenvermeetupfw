@@ -1,12 +1,14 @@
 {
   "topSearchBar": {
     "description": "Search bar at top of the page",
-    "locator": "#gh-ac"
+    "locator": "#gh-ac",
+    "groups": ["requiredForPage"]
   },
 
   "topSearchButton": {
     "description": "Search button at top of page",
-    "locator": "#gh-btn"
+    "locator": "#gh-btn",
+    "groups": ["requiredForPage"]
   }
 
 }

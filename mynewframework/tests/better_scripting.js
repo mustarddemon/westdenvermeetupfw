@@ -1,8 +1,10 @@
 var webdriverio = require('webdriverio');
 var EbayHome = require('../pages/EbayHome');
 var commands = require('../lib/commands');
+var PageObjectCollection = require('../pages/page_object_collection');
 
 var driver;
+var on;
 
 describe('Basic tests without a framework', function() {
   this.timeout(30000);
@@ -18,6 +20,7 @@ describe('Basic tests without a framework', function() {
     driver = webdriverio.remote(options)
     .init();
     commands.setDriver(driver);
+    on = new PageObjectCollection(driver);
     return done();
   });
 
@@ -25,7 +28,7 @@ describe('Basic tests without a framework', function() {
     driver.end();
   });
 
-  it('Should open ebay and search for orphans', function() {
+  it.skip('Should open ebay and search for orphans', function() {
     //I want to open a browser
     //I want to load google
     var ebayHome = new EbayHome(driver);
@@ -36,5 +39,16 @@ describe('Basic tests without a framework', function() {
 
   });
 
+  it('Should open ebay and search for orphans but better this time', function() {
+
+    return on.ebayHome().open()
+    .then(function(result) {
+      return on.ebayHome().waitForPageToLoad();
+    })
+    .then(function(result) {
+      return on.ebayHome().searchFor('orphans');
+    });
+
+  });
 
 });
