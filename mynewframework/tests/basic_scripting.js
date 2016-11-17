@@ -3,11 +3,9 @@ var webdriverio = require('webdriverio');
 
 
 describe('Basic tests without a framework', function() {
-
+  this.timeout(30000);
 
   it('Should open google', function() {
-    //I want to open a browser
-    //I want to load google
     var options = {
       desiredCapabilities: {
         browserName: 'firefox'
