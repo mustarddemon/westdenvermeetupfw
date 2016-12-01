@@ -24,7 +24,13 @@ module.exports = {
   setValue: function(locatorObject, textToType) {
     console.log('I am typing ' + textToType + ' into ' + locatorObject.description);
     return new Promise(function(resolve, reject) {
-      return resolve(driver.setValue(locatorObject.locator, textToType));
+      if (locatorObject.frame) {
+        return resolve(driver.frame(locatorObject.frame)
+          .setValue(locatorObject.locator, textToType)
+          .frame(null));
+      } else {
+        return resolve(driver.setValue(locatorObject.locator, textToType));
+      }
     });
   },
 
