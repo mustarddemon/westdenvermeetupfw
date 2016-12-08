@@ -7,11 +7,19 @@ var locators;
 
 function EbayHome(passedInDriver) {
   PageObject.call(this, passedInDriver);
-  this.locators = require('../locators/EbayHome.json');
 };
 
 //This is the old way of inheritence ES6 has a much better way
 util.inherits(EbayHome, PageObject);
+
+EbayHome.prototype.navigationPath = function() {
+  return [
+    {
+      page: 'ebayHome',
+      action: 'open'
+    }
+  ];
+}
 
 EbayHome.prototype.open = function() {
     var self = this;

@@ -57,14 +57,15 @@ module.exports = {
       if (locatorObject.frame) {
         //we know we have a frame
         return resolve(driver.frame(locatorObject.frame)
-       .waitForVisible(locatorObject.locator)
+       .waitForVisible(locatorObject.locator, 5000)
        .frame(null));
       } else {
-        return resolve(driver.waitForVisible(locatorObject.locator));
+        return resolve(driver.waitForVisible(locatorObject.locator, 5000));
       }
         //write some logic to wait for a single element to load
     });
 
-  }
+  },
+
 
 };

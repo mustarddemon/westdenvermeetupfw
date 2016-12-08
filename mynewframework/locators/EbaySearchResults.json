@@ -1,0 +1,31 @@
+{
+  "topSearchBar": {
+    "description": "Search bar at top of the page",
+    "locator": "#gh-ac",
+    "groups": ["requiredForPage"]
+  },
+
+  "topSearchButton": {
+    "description": "Search button at top of page",
+    "locator": "#gh-btn",
+    "groups": ["requiredForPage"]
+  },
+
+  "allListingsButton": {
+    "description": "All Listings Button at Top of Results",
+    "locator": "span[title='All Listings']",
+    "groups": ["requiredForPage"]
+  },
+
+  "shoppingCartIcon": {
+    "description": "Shopping Cart Icon in Header",
+    "locator": "#gh-cart",
+    "groups": ["requiredForPage"]
+  },
+
+  "sortByDropDown": {
+    "description": "Sort By Dropdown at top of page",
+    "locator": "#DashSortByContainer",
+    "groups": ["requiredForPage"]
+  }
+}

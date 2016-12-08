@@ -21,7 +21,8 @@ describe('Basic tests without a framework', function() {
     .init();
     commands.setDriver(driver);
     on = new PageObjectCollection(driver);
-    return done();
+    //temporary way to give the browser a chance to open
+    setTimeout(done, 3000);
   });
 
   afterEach(function() {
@@ -50,5 +51,24 @@ describe('Basic tests without a framework', function() {
     });
 
   });
+
+  it('Should open ebay and search for orphans and go to the cart', function() {
+
+    return on.ebayHome().open()
+    .then(function(result) {
+      return on.ebayHome().waitForPageToLoad();
+    })
+    .then(function(result) {
+      return on.ebayHome().searchFor('orphans');
+    })
+    .then(function(result) {
+      return on.ebaySearchResults().goToCart();
+    })
+    .then(function(result) {
+      return on.ebayCart().waitForPageToLoad();
+    });
+
+  });
+
 
 });

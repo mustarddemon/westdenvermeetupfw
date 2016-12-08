@@ -1,5 +1,7 @@
 
 var EbayHome = require('./EbayHome');
+var EbaySearchResults = require('./EbaySearchResults');
+var EbayCart = require('./EbayCart');
 var driver;
 
 function PageObjectCollection(passedInDriver) {
@@ -13,7 +15,15 @@ PageObjectCollection.prototype.ebayHome = function() {
 };
 
 PageObjectCollection.prototype.ebaySearchResults = function() {
-  //stub
+    var self = this;
+    var ebaySearchResults = new EbaySearchResults(self.driver);
+    return ebaySearchResults;
+} ;
+
+PageObjectCollection.prototype.ebayCart = function() {
+    var self = this;
+    var ebayCart = new EbayCart(self.driver);
+    return ebayCart;
 } ;
 
 module.exports = PageObjectCollection;
