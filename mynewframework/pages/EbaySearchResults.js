@@ -31,7 +31,4 @@ EbaySearchResults.prototype.goToCart = function() {
   commands.click(self.locators.shoppingCartIcon);
 };
 
-
-
-
 module.exports = EbaySearchResults;

@@ -1,0 +1,8 @@
+{
+  "shoppingCartHeader": {
+    "description": "Your eBay Shopping CarT Header",
+    "locator": "#PageTitle h1",
+    "groups": ["requiredForPage"]
+  }
+
+}

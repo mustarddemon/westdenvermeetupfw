@@ -29,7 +29,7 @@ describe('Basic tests without a framework', function() {
     driver.end();
   });
 
-  it.skip('Should open ebay and search for orphans', function() {
+  it('Should open ebay and search for orphans', function() {
     //I want to open a browser
     //I want to load google
     var ebayHome = new EbayHome(driver);
@@ -52,7 +52,7 @@ describe('Basic tests without a framework', function() {
 
   });
 
-  it('Should open ebay and search for orphans and go to the cart', function() {
+  it.only('Should open ebay and search for orphans and go to the cart', function() {
 
     return on.ebayHome().open()
     .then(function(result) {

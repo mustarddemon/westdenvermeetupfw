@@ -14,6 +14,12 @@ PageObjectCollection.prototype.ebayHome = function() {
     return ebayHome;
 };
 
+PageObjectCollection.prototype.samplePageObject = function() {
+  var self = this;
+  var samplePageObject = new SamplePageObject(self.driver);
+  return samplePageObject;
+}
+
 PageObjectCollection.prototype.ebaySearchResults = function() {
     var self = this;
     var ebaySearchResults = new EbaySearchResults(self.driver);
