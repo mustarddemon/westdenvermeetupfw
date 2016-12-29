@@ -1,0 +1,8 @@
+{
+  "findProsButton": {
+    "description": "Find Pros button next to search bar",
+    "locator": "input[value='Find Pros']",
+    "groups": ["requiredForPage"]
+  }
+
+}

@@ -35,7 +35,7 @@ router.post('/users', jsonParser, function(req, res) {
     }
     return res.send(400, error);
   } else {
-    return res.send(200, result);
+    return res.send(201, result);
   }
 
 });

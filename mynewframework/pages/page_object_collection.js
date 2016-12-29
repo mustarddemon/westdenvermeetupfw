@@ -32,4 +32,10 @@ PageObjectCollection.prototype.ebayCart = function() {
     return ebayCart;
 } ;
 
+PageObjectCollection.prototype.homeAdvisor = function() {
+    var self = this;
+    var homeAdvisor = new HomeAdvisor(self.driver);
+    return homeAdvisor;
+} ;
+
 module.exports = PageObjectCollection;

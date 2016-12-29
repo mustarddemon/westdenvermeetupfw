@@ -1,7 +1,7 @@
 {
-  "shoppingCartHeader": {
-    "description": "Your eBay Shopping CarT Header",
-    "locator": "#PageTitle h1",
+  "yourElementHere": {
+    "description": "Description For Your Element",
+    "locator": "css Locator for your element",
     "groups": ["requiredForPage"]
   }
 

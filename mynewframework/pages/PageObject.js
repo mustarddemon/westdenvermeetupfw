@@ -15,9 +15,7 @@ var findRequiredLocators = function(locators) {
         returnArray.push(locator);
       }
     }
-
   });
-  //return when done
   return returnArray;
 };
 

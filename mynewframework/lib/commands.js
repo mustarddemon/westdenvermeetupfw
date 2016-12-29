@@ -67,5 +67,20 @@ module.exports = {
 
   },
 
+  navigateToPage: function(pageObjectCollection, page) {
+    var on = pageObjectCollection;
+    //for each step in the navigation path
+    var navigationPath = on[page]().navigationPath();
+
+    return Promise.each(navigationPath, function(navigationStep) {
+      var page = navigationStep.page;
+      var action = navigationStep.action;
+      var data = navigationStep.data;
+      return on[page]()[action](data);
+    });
+    //execute that step with data (if any)
+
+  }
+
 
 };

@@ -1,16 +1,4 @@
 {
-  "topSearchBar": {
-    "description": "Search bar at top of the page",
-    "locator": "#gh-ac",
-    "groups": ["requiredForPage"]
-  },
-
-  "topSearchButton": {
-    "description": "Search button at top of page",
-    "locator": "#gh-btn",
-    "groups": ["requiredForPage"]
-  },
-
   "allListingsButton": {
     "description": "All Listings Button at Top of Results",
     "locator": "span[title='All Listings']",

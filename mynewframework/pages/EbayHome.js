@@ -18,6 +18,7 @@ EbayHome.prototype.navigationPath = function() {
       page: 'ebayHome',
       action: 'open'
     }
+
   ];
 }
 
