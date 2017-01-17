@@ -8,6 +8,10 @@ module.exports = {
 
   getCreateUserPath: function() {
     return '/users';
+  },
+
+  getUserPath: function(userId) {
+    return '/users/' + userId;
   }
 
 

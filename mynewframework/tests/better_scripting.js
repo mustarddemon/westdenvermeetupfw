@@ -90,7 +90,7 @@ describe('Basic tests without a framework', function() {
   ];
 
   tests.forEach(function(test) {
-    it.only('Make sure page ' + test.description + ' loads correctly', function() {
+    it('Make sure page ' + test.description + ' loads correctly', function() {
       //check if the page has a navigation path
       if (!on[test.page]().navigationPath) {
           return;
